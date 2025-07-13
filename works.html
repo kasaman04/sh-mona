@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Works - KAZE Studio</title>
+    <meta name="description" content="KAZE Studioの制作実績をご紹介。Web制作、アプリ開発、デザインの実績をご覧いただけます。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header header-fixed" id="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html">KAZE STUDIO</a>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html" class="nav-link">HOME</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li><a href="works.html" class="nav-link active">WORKS</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">WORKS</h1>
+                <p class="page-subtitle">制作実績をご紹介</p>
+            </div>
+        </section>
+
+        <section class="works-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="web">WEB</button>
+                    <button class="filter-btn" data-filter="app">APP</button>
+                    <button class="filter-btn" data-filter="design">DESIGN</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="works-gallery">
+            <div class="container">
+                <div class="works-grid">
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work1.webp" alt="E-Commerce Platform">
+                        <div class="work-overlay">
+                            <h3>E-Commerce Platform</h3>
+                            <p>React + Node.js</p>
+                            <button class="work-detail-btn" data-work="1">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="app">
+                        <img src="images/works/work2.webp" alt="Task Management App">
+                        <div class="work-overlay">
+                            <h3>Task Management App</h3>
+                            <p>React Native</p>
+                            <button class="work-detail-btn" data-work="2">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work3.webp" alt="Portfolio Website">
+                        <div class="work-overlay">
+                            <h3>Portfolio Website</h3>
+                            <p>Next.js + TypeScript</p>
+                            <button class="work-detail-btn" data-work="3">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="design">
+                        <img src="images/works/work4.webp" alt="Brand Identity">
+                        <div class="work-overlay">
+                            <h3>Brand Identity</h3>
+                            <p>Logo + Web Design</p>
+                            <button class="work-detail-btn" data-work="4">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work5.webp" alt="Corporate Website">
+                        <div class="work-overlay">
+                            <h3>Corporate Website</h3>
+                            <p>Vue.js + Nuxt.js</p>
+                            <button class="work-detail-btn" data-work="5">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="app">
+                        <img src="images/works/work6.webp" alt="Health Tracking App">
+                        <div class="work-overlay">
+                            <h3>Health Tracking App</h3>
+                            <p>Flutter</p>
+                            <button class="work-detail-btn" data-work="6">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work7.webp" alt="Real Estate Platform">
+                        <div class="work-overlay">
+                            <h3>Real Estate Platform</h3>
+                            <p>React + Express</p>
+                            <button class="work-detail-btn" data-work="7">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="design">
+                        <img src="images/works/work8.webp" alt="Magazine Layout">
+                        <div class="work-overlay">
+                            <h3>Magazine Layout</h3>
+                            <p>Editorial Design</p>
+                            <button class="work-detail-btn" data-work="8">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work9.webp" alt="SaaS Dashboard">
+                        <div class="work-overlay">
+                            <h3>SaaS Dashboard</h3>
+                            <p>Vue.js + D3.js</p>
+                            <button class="work-detail-btn" data-work="9">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="app">
+                        <img src="images/works/work10.webp" alt="Food Delivery App">
+                        <div class="work-overlay">
+                            <h3>Food Delivery App</h3>
+                            <p>React Native</p>
+                            <button class="work-detail-btn" data-work="10">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="design">
+                        <img src="images/works/work11.webp" alt="Corporate Branding">
+                        <div class="work-overlay">
+                            <h3>Corporate Branding</h3>
+                            <p>Brand Identity</p>
+                            <button class="work-detail-btn" data-work="11">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work12.webp" alt="Educational Platform">
+                        <div class="work-overlay">
+                            <h3>Educational Platform</h3>
+                            <p>Next.js + Prisma</p>
+                            <button class="work-detail-btn" data-work="12">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work13.webp" alt="Event Website">
+                        <div class="work-overlay">
+                            <h3>Event Website</h3>
+                            <p>Gatsby + Contentful</p>
+                            <button class="work-detail-btn" data-work="13">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="app">
+                        <img src="images/works/work14.webp" alt="Finance Tracker">
+                        <div class="work-overlay">
+                            <h3>Finance Tracker</h3>
+                            <p>Flutter + Firebase</p>
+                            <button class="work-detail-btn" data-work="14">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="design">
+                        <img src="images/works/work15.webp" alt="Product Design">
+                        <div class="work-overlay">
+                            <h3>Product Design</h3>
+                            <p>UI/UX Design</p>
+                            <button class="work-detail-btn" data-work="15">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work16.webp" alt="Travel Blog">
+                        <div class="work-overlay">
+                            <h3>Travel Blog</h3>
+                            <p>WordPress + Custom Theme</p>
+                            <button class="work-detail-btn" data-work="16">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work17.webp" alt="Restaurant Website">
+                        <div class="work-overlay">
+                            <h3>Restaurant Website</h3>
+                            <p>React + Strapi</p>
+                            <button class="work-detail-btn" data-work="17">詳細を見る</button>
+                        </div>
+                    </div>
+                    <div class="work-item" data-category="app">
+                        <img src="images/works/work18.webp" alt="Music Player">
+                        <div class="work-overlay">
+                            <h3>Music Player</h3>
+                            <p>React Native</p>
+                            <button class="work-detail-btn" data-work="18">詳細を見る</button>
+                        </div>
+                    </div>
+                    <!-- 新しい実績を追加する際は、以下のフォーマットをコピーして使用してください
+                    <div class="work-item" data-category="カテゴリ（web/app/design）">
+                        <img src="images/works/work番号.webp" alt="プロジェクト名">
+                        <div class="work-overlay">
+                            <h3>プロジェクト名</h3>
+                            <p>使用技術</p>
+                            <button class="work-detail-btn" data-work="番号">詳細を見る</button>
+                        </div>
+                    </div>
+                    -->
+                    <div class="work-item" data-category="web">
+                        <img src="images/works/work19.webp" alt="新規プロジェクト" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23e0e0e0\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' font-family=\'Arial, sans-serif\' font-size=\'24\' fill=\'%23999\'%3ENo Image%3C/text%3E%3C/svg%3E'">
+                        <div class="work-overlay">
+                            <h3>新規プロジェクト</h3>
+                            <p>React + Node.js</p>
+                            <button class="work-detail-btn" data-work="19">詳細を見る</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">プロジェクトのご相談</h2>
+                <p class="cta-description">
+                    30秒で相談開始できます。お気軽にお声がけください。
+                </p>
+                <a href="contact.html" class="cta-button">無料相談を予約</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Work Detail Modal -->
+    <div class="modal" id="work-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-image" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-description"></p>
+                    <div class="modal-details">
+                        <h4>プロジェクト詳細</h4>
+                        <ul id="modal-details-list"></ul>
+                    </div>
+                    <div class="modal-tech">
+                        <h4>使用技術</h4>
+                        <div id="modal-tech-tags"></div>
+                    </div>
+                    <div class="modal-results">
+                        <h4>成果・結果</h4>
+                        <ul id="modal-results-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>KAZE STUDIO</h3>
+                <p>東京都渋谷区</p>
+                <p>contact@kazestudio.jp</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KAZE STUDIO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

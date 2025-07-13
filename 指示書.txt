@@ -1,0 +1,116 @@
+ClaudeCode 指示書：フルスタック個人スタジオ「KAZE Studio」公式サイト制作用
+
+✅ 制作目的
+東京都在住の男性フリーランスデザイナー／エンジニアによるポートフォリオ兼営業サイトを ClaudeCode で構築し、
+
+過去実績をビジュアルと数値で示して信頼を獲得
+
+依頼〜納品までの流れを明確化して不安を解消
+
+“30 秒で相談開始” できる問い合わせ導線を設置
+
+ことで案件相談数の最大化を図る。
+
+✅ 参考サイト
+UNDERLINE https://u-d-l.jp/
+
+主に意識するポイント：
+
+白・淡いブルー・濃紺を生かした余白リッチなミニマル UI
+
+見出しは英字大文字＋ letter-spacing を広く取ったタイポグラフィ
+
+スクロール時のフェード＋軽いスライドだけで派手すぎない動作
+
+実績サムネイルを等幅グリッドで並べ、クリックでモーダル詳細
+
+グローバルナビはロゴ＋5 リンクをゆったり配置、トップのみ透明／下層は白背景固定
+
+✅ サイト構成（全5ページ）
+
+ページ	URL	内容概要
+トップページ	/index.html	ファーストビュー、サービス 3 本柱、実績スライダー、CTA（30 分無料相談）
+About	/about.html	デザイナー略歴、価値観、開発スタック、ミッションステートメント
+Works	/works.html	フィルタ付きギャラリー、各プロジェクト詳細モーダル（目的／技術／成果数値）
+Blog／Insights	/blog.html	MDX 由来の技術・UI 記事リスト（タグ／投稿日／読了時間）
+Contact	/contact.html	問い合わせフォーム、稼働可能時期カレンダー iframe、SNS リンク
+
+✅ デザイン指示
+
+🌈 カラー
+
+ベース：#FFFFFF（白）
+
+テキスト：#111111（ダークグレー）
+
+アクセント：#38BDF8（淡いブルー）
+
+ボタンホバー：#0F6DF8
+
+🖋 フォント
+
+日本語："Noto Sans JP", sans-serif
+
+英語："Inter", sans-serif
+
+📱 レスポンシブ
+
+SP：1 カラム、ハンバーガーメニュー（nav は全画面モーダル）
+
+PC：1200 px 前後センター寄せ、余白ゆったり（左右パディング 64 px）
+
+🔁 UI パーツ
+
+グローバルナビ：トップでは透明、スクロール or 下層では白背景 + シャドウ
+
+CTA ボタン（例「無料相談を予約」）：アクセント色背景＋白文字、全ページで 1 件以上配置
+
+フッター：スタジオ名・住所（市区町村まで）・メール・SNS アイコン
+
+✅ 技術仕様（ClaudeCode 構築）
+
+📂 ディレクトリ構成例
+
+css
+コピーする
+編集する
+project/
+├ index.html
+├ about.html
+├ works.html
+├ blog.html
+├ contact.html
+├ css/
+│  └ style.css
+├ js/
+│  └ main.js
+├ images/
+│  ├ hero.webp
+│  ├ works/
+│  └ avatars/
+├ posts/
+│  └ 2025-07-06-next14-performance.mdx
+💻 必須要素（全ページ共通）
+
+<header> と <footer> をコンポーネント化して include
+
+メタ情報：title description viewport 完備
+
+OGP・Twitter Card・favicon（SVG + PNG）設定済み
+
+📷 ギャラリー（works.html）
+
+Swiper.js を使用（PC 3 列／SP 1 列）
+
+クリック → Framer Motion モーダルでプロジェクト詳細読み込み
+
+✉️ フォーム（contact.html）
+
+form + required + pattern で HTML バリデーション
+
+送信ボタンはローディング状態制御（JS）
+
+バックエンド不要の場合は Formspree などを想定（任意）
+
+✅ 文章流し込み
+トップ〜コンタクトのテキストは既存ドラフトを使用。data.json に分離し、ClaudeCode のタグでバインド可能。
