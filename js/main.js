@@ -386,6 +386,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     modalLink.href = work.url;
                     modalLink.style.display = 'inline-block';
                     console.log('Link set to:', work.url);
+                    
+                    // Add click event to ensure it works
+                    modalLink.onclick = function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Link clicked, opening:', work.url);
+                        window.open(work.url, '_blank');
+                        return false;
+                    };
                 } else {
                     modalLink.style.display = 'none';
                     console.log('No URL found, hiding link');
