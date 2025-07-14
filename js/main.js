@@ -380,11 +380,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Update link
                 const modalLink = document.getElementById('modal-link');
+                console.log('Work data:', work);
+                console.log('Work URL:', work.url);
                 if (work.url) {
                     modalLink.href = work.url;
                     modalLink.style.display = 'inline-block';
+                    console.log('Link set to:', work.url);
                 } else {
                     modalLink.style.display = 'none';
+                    console.log('No URL found, hiding link');
                 }
                 
                 // Show modal
