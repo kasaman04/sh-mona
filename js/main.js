@@ -320,6 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: '一椀 - 創作和食レストラン',
             description: '中目黒の高級創作和食レストラン「一椀」のブランディングWebサイト。旬の食材と職人の技を表現した上質なデザインで、レストランの世界観を完璧に演出。',
             image: 'images/works/work19.webp',
+            url: 'https://kasaman04.github.io/japanese-restaurant-website/',
             details: [
                 'ミニマリストデザイン',
                 '高品質な料理・店内写真',
@@ -327,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 '季節メニュー更新機能',
                 'バイリンガル対応（日英）'
             ],
-            technologies: ['HTML5', 'CSS3', 'JavaScript', 'レスポンシブデザイン'],
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'レスポンシブデザイン', 'GitHub Pages'],
             results: [
                 '和の美学をWebデザインで表現',
                 '食材の美しさを引き立てる写真レイアウト',
@@ -376,6 +377,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     li.textContent = result;
                     resultsList.appendChild(li);
                 });
+                
+                // Update link
+                const modalLink = document.getElementById('modal-link');
+                if (work.url) {
+                    modalLink.href = work.url;
+                    modalLink.style.display = 'inline-block';
+                } else {
+                    modalLink.style.display = 'none';
+                }
                 
                 // Show modal
                 modal.style.display = 'block';
