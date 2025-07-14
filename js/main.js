@@ -360,15 +360,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     detailsList.appendChild(li);
                 });
                 
-                // Update technologies
-                const techTags = document.getElementById('modal-tech-tags');
-                techTags.innerHTML = '';
-                work.technologies.forEach(tech => {
-                    const span = document.createElement('span');
-                    span.textContent = tech;
-                    techTags.appendChild(span);
-                });
-                
                 // Update results
                 const resultsList = document.getElementById('modal-results-list');
                 resultsList.innerHTML = '';
