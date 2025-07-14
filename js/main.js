@@ -193,6 +193,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('work-modal');
     const modalClose = document.querySelector('.modal-close');
     
+    console.log('Found buttons:', workDetailButtons.length);
+    console.log('Modal element:', modal);
+    console.log('Modal close:', modalClose);
+    
     // Sample work data
     const workData = {
         '1': {
@@ -338,13 +342,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    workDetailButtons.forEach(button => {
+    workDetailButtons.forEach((button, index) => {
+        console.log(`Setting up button ${index}:`, button);
         button.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
+            console.log('Button clicked!');
             const workId = this.getAttribute('data-work');
+            console.log('Work ID:', workId);
             const work = workData[workId];
+            console.log('Work found:', work);
             
-            if (work) {
+            if (work && modal) {
                 // Update modal content
                 document.getElementById('modal-title').textContent = work.title;
                 document.getElementById('modal-image').src = work.image;
@@ -383,8 +392,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // Show modal
+                console.log('Showing modal');
                 modal.style.display = 'block';
+                modal.style.zIndex = '9999';
                 document.body.style.overflow = 'hidden';
+                console.log('Modal displayed');
             }
         });
     });
@@ -392,16 +404,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal
     if (modalClose) {
         modalClose.addEventListener('click', function() {
+            console.log('Closing modal via close button');
             modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = '';
         });
     }
     
     // Close modal when clicking outside
     window.addEventListener('click', function(e) {
         if (e.target === modal) {
+            console.log('Closing modal via outside click');
             modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = '';
         }
     });
     
